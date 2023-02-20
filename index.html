@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
     <title>First Timers</title>
 </head>
 <body class="">
@@ -48,9 +47,76 @@
             <input type="tel" class="form-control" id="waphone"  name="waphone">
         </div>
         <div class="form-group">
-            <label for="lname">Residential Address</label>
-            <input type="text" class="form-control" id="lname" name="lname">
+            <label for="address">Residential Address</label>
+            <input type="text" class="form-control" id="address" name="address">
         </div>
+
+        <div class="form-group">
+            <label for="categories">Please, select any of these categories you belong to</label>
+           <div class="check-div">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="student" name="origin" value="Student">
+                    <label class="form-check-label" for="student">I'm a student in a school nearby</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="resident" name="origin" value="Resident">
+                    <label class="form-check-label" for="resident">I'm an original resident/indigene of this city</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="visit" name="origin" value="On a visit">
+                    <label class="form-check-label" for="visit">I came here on a visit</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="work" name="origin" value="City for work">
+                    <label class="form-check-label" for="work">I'm in this city for work/business</label>
+                </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="">How did you come across/ hear about CrossWalk Church?</label>
+       <div class="check-div">
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="flier" name="knowChurch" value="A flier">
+                <label class="form-check-label" for="flier">A flier</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="friend" name="knowChurch" value="A friend">
+                <label class="form-check-label" for="friend">A friend told me</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="member" name="knowChurch" value="A member">
+                <label class="form-check-label" for="member">A member preached to me</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="discover" name="knowChurch" value="I discovered">
+                <label class="form-check-label" for="discover">I discovered there was a Church around and I wanted to visit</label>
+            </div>
+       </div> 
+    </div>
+    <div class="form-group">
+        <label for="">Do you speak in tongues?</label>
+        <div class="check-div">
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="yesTongues" name="tongues" value="Yes">
+                <label class="form-check-label" for="yesTongues">Yes</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="noTongues" name="tongues" value="No">
+                <label class="form-check-label" for="noTongues">No</label>
+            </div>
+        </div>    
+    </div>
+    <div class="form-group">
+        <label for="committed">Are you committed to any other Church?</label>
+        <input type="text" class="form-control" id="committed" name="committed">
+    </div>
+    <div class="form-group">
+        <label for="learn">What did you learn from today's service?</label>
+        <input type="text" class="form-control" id="learn" name="learn">
+    </div>
+
+        
     </form>
 </body>
 </html>
