@@ -131,8 +131,12 @@ form label{
     .check-div{
     width: 100%;
     }
-    .form h1{
+    form h1{
         font-size: 30px;
+    }
+    .title img{
+        margin-top: -10px;
+        width: 70%;
     }
     .form-group>label{
         display: flex;
