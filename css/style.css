@@ -135,8 +135,14 @@ form a:hover{
     }
 }
 @media (max-width:600px){
+    header{
+        margin-top: 50px;
+    }
+    .home{
+        margin-top: -25px;
+    }
     .form-control{
-        width: 360px;
+        width: 305px;
         padding: 20px;
     }
     .check-div{
@@ -149,10 +155,17 @@ form a:hover{
         margin-top: -10px;
         width: 70%;
     }
+    .form-check-label{
+        font-size: 13px;
+    }
     .form-group>label{
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    .submit-btn{
+        font-size: 13px;
+        margin-bottom: 50px;
     }
 }
