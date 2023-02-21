@@ -135,11 +135,13 @@ form a:hover{
     }
 }
 @media (max-width:600px){
-    header{
-        margin-top: 50px;
+    header {
+        background-repeat: round;
+        margin: 0;
+        padding: 17%;
     }
     .home{
-        margin-top: -25px;
+        margin-top: -50px;
     }
     .form-control{
         width: 305px;
