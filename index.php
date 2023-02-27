@@ -1,4 +1,10 @@
 <?php
+
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
+header('Access-Control-Allow-Methods: POST,GET,OPTIONS');
+header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
+
 if(isset($_POST['submit'])){
    $fisrtname = $_POST['fisrtname'];
    $lastname = $_POST['lastname'];
@@ -19,7 +25,7 @@ if(isset($_POST['submit'])){
    
    $conn = mysqli_connect($host, $user, $pass, $dbname);
    
-   $sql = "INSERT INTO student(fisrtname, lastname, callnumber, whatsapp, email, address, origin, knowChurch, tongues, commitment, learn) values ('$fisrtname', '$lastname', '$callnumber', '$whatsapp', '$email', '$address', '$origin', '$knowChurch', '$tongues', '$commitment', '$learn')";
+   $sql = "INSERT INTO firsttimers(fisrtname, lastname, callnumber, whatsapp, email, address, origin, knowChurch, tongues, commitment, learn) values ('$fisrtname', '$lastname', '$callnumber', '$whatsapp', '$email', '$address', '$origin', '$knowChurch', '$tongues', '$commitment', '$learn')";
    mysqli_query($conn, $sql); 
    if($sql) {
         echo "<script>alert('Data Uploaded Successfully')</script>"; 
@@ -32,3 +38,4 @@ if(isset($_POST['submit'])){
     }
 }
 ?>
+
