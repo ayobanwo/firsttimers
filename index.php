@@ -18,19 +18,12 @@ if(isset($_POST['submit'])){
    $commitment = $_POST['commitment'];
    $learn = $_POST['learn'];
    
-   //Local Server configuration
-   
-   $host = 'localhost';
-   $user = 'root';
-   $pass = '';
-   $dbname = 'firsttimers';
-
     //Live server configuration
 
-//    $host = 'localhost';
-//    $user = 'whituezj_auxanodev';
-//    $pass = 'wfm@lsdev!';
-//    $dbname = 'whituezj_wfmauxdevdb';
+   $host = 'localhost';
+   $user = 'whituezj_auxanodev';
+   $pass = 'wfm@lsdev!';
+   $dbname = 'whituezj_wfmauxdevdb';
    
    $conn = mysqli_connect($host, $user, $pass, $dbname) or die('Database connection error');
    $sql = "INSERT INTO firsttimers(firstname, lastname, callnumber, whatsapp, email, address, origin, knowChurch, tongues, commitment, learn) values ('$fisrtname', '$lastname', '$callnumber', '$whatsapp', '$email', '$address', '$origin', '$knowChurch', '$tongues', '$commitment', '$learn')";
@@ -38,7 +31,7 @@ if(isset($_POST['submit'])){
    if($sql) {
         echo "Success";
         //direct to success screen
-        header('Location: index.html');
+        header('Location: success.html');
         exit();
         }else{
             echo "Error";
