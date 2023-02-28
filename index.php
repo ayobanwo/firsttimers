@@ -14,27 +14,37 @@ if(isset($_POST['submit'])){
    $address = $_POST['address'];
    $origin = $_POST['origin'];
    $knowChurch = $_POST['knowChurch'];
-   $tongues = $_POST['tongues'];
+   $tongues = $_POST['tongues']; 
    $commitment = $_POST['commitment'];
    $learn = $_POST['learn'];
    
+   //Local Server configuration
+   
    $host = 'localhost';
-   $user = 'whituezj_auxanodev';
-   $pass = 'wfm@lsdev!';
-   $dbname = 'whituezj_wfmauxdevdb';
+   $user = 'root';
+   $pass = '';
+   $dbname = 'firsttimers';
+
+    //Live server configuration
+
+//    $host = 'localhost';
+//    $user = 'whituezj_auxanodev';
+//    $pass = 'wfm@lsdev!';
+//    $dbname = 'whituezj_wfmauxdevdb';
    
-   $conn = mysqli_connect($host, $user, $pass, $dbname);
-   
-   $sql = "INSERT INTO firsttimers(fisrtname, lastname, callnumber, whatsapp, email, address, origin, knowChurch, tongues, commitment, learn) values ('$fisrtname', '$lastname', '$callnumber', '$whatsapp', '$email', '$address', '$origin', '$knowChurch', '$tongues', '$commitment', '$learn')";
+   $conn = mysqli_connect($host, $user, $pass, $dbname) or die('Database connection error');
+   $sql = "INSERT INTO firsttimers(firstname, lastname, callnumber, whatsapp, email, address, origin, knowChurch, tongues, commitment, learn) values ('$fisrtname', '$lastname', '$callnumber', '$whatsapp', '$email', '$address', '$origin', '$knowChurch', '$tongues', '$commitment', '$learn')";
    mysqli_query($conn, $sql); 
    if($sql) {
-        echo "<script>alert('Data Uploaded Successfully')</script>"; 
+        echo "Success";
+        //direct to success screen
         header('Location: index.html');
         exit();
         }else{
-        echo "<script>alert('There was an error, please try again')</script>"; 
-        header('Location: index.html');
-        exit();
+            echo "Error";
+             //direct to failed screen
+            header('Location: index.html');
+            exit();
     }
 }
 ?>
